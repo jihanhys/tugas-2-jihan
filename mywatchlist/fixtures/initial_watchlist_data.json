@@ -1,0 +1,112 @@
+[
+ {
+    "model": "mywatchlist.MyWatchList",
+    "pk": 1,
+    "fields":{
+        "watched": "Sudah ditonton",
+        "title": "Twenty Five Twenty One",
+        "rating": 5,
+        "release_date":"12 Februari 2022",
+        "review":"Cerita romance seorang atlet fencing bernama Na Hee Do dan reporter bernama Baek Yijin ketika umur mereka 21 dan 25 tahun. Ceritanya menyenangkan, tetapi sad ending."
+    }
+ },
+ {
+    "model": "mywatchlist.MyWatchList",
+    "pk": 2,
+    "fields":{
+        "watched": "Sudah ditonton",
+        "title": "Big Mouth",
+        "rating": 5,
+        "release_date":"29 Juli 2022",
+        "review":"Salah satu drama favorit! Alur ceritanya seru, penonton selalu dibuat penasaran dengan siapa sosok big mouth sebenarnya. Highly recommended."
+    }
+ }, 
+ {
+    "model": "mywatchlist.MyWatchList",
+    "pk": 3,
+    "fields":{
+        "watched": "Sudah ditonton",
+        "title": "Extraordinary Attorney Woo",
+        "rating": 5,
+        "release_date":"29 Juni 2022",
+        "review":"Menceritakan perjalanan Woo Young Woo sebagai pengacara dengan spektrum autism di Hanbada. Setiap episode menceritakan kasus-kasus yang berbeda. Akting aktrisnya bagus banget!"
+    }
+ }, 
+ {
+    "model": "mywatchlist.MyWatchList",
+    "pk": 4,
+    "fields":{
+        "watched": "Sedang ditonton",
+        "title": "Little Women",
+        "rating": 5,
+        "release_date":"3 September 2022",
+        "review":"Masih tayang, tetapi sudah sangat keren. Tidak terlihat seperti remake dan ceritanya tidak bisa ditebak."
+    }
+ }, 
+ {
+    "model": "mywatchlist.MyWatchList",
+    "pk": 5,
+    "fields":{
+        "watched": "Sudah ditonton",
+        "title": "Alchemy of Souls",
+        "rating": 4,
+        "release_date":"18 Juni 2022",
+        "review":"Drama kolosal fantasy tentang penyihir-penyihir. Tokoh utamanya, Naksu hidup ditubuh orang lain bernama Mudeok karena melakukan Hwanhon. Ceritanya bagus dan akan ada season 2 tahun ini!"
+    }
+ }, 
+ {
+    "model": "mywatchlist.MyWatchList",
+    "pk": 6,
+    "fields":{
+        "watched": "Sudah ditonton",
+        "title": "Business Proposal",
+        "rating": 4,
+        "release_date":"28 Februari 2022",
+        "review":"Ceritanya comedy romance yang ringan dan sangat menghibur. Banyak adegan lucu yang membuat penonton tertawa karena tingkat dari pemain-pemainnya. Sangat direkomendasikan untuk yang sedang stress ^^"
+    }
+ }, 
+ {
+    "model": "mywatchlist.MyWatchList",
+    "pk": 7,
+    "fields":{
+        "watched": "Sudah ditonton",
+        "title": "Tomorrow",
+        "rating": 4,
+        "release_date":"1 April 2022",
+        "review":"Bercerita tentang grim reaper, tetapi bukannya mencabut nyawa, grim reaper tersebut justru bertugas menyelematkan orang yang ingin bunuh diri. Tiap episode menceritakan kisah hidup orang yang berbeda. Sedih :("
+    }
+ }, 
+ {
+    "model": "mywatchlist.MyWatchList",
+    "pk": 8,
+    "fields":{
+        "watched": "Sudah ditonton",
+        "title": "Cafe Minamdang",
+        "rating": 3,
+        "release_date":"27 Juni 2022",
+        "review":"Menceritakan seorang mantan profiler yang bekerja sebagai dukun bohongan, karena sebenanrnya ia dibantu oleh seorang hacker yang pernah bekerja di pemerintah. Dramanya berfokus pada pemecahan misteri pembunuhan beratai yang dilakukan psikopat."
+    }
+ }, 
+ {
+    "model": "mywatchlist.MyWatchList",
+    "pk": 9,
+    "fields":{
+        "watched": "Sudah ditonton",
+        "title": "Our Blues",
+        "rating": 3,
+        "release_date":"9 April 2022",
+        "review":"Drama dengan cerita yang cukup ringan, tetapi juga bisa dibilang berat karena berkaitan dengan kehidupan dan masalah manusia sehari-hari. Tidak hanya berfokus pada main lead, tetapi juga tokoh lainnya."
+    }
+ }, 
+ {
+    "model": "mywatchlist.MyWatchList",
+    "pk": 10,
+    "fields":{
+        "watched": "Sudah ditonton",
+        "title": "All of Us Are Dead",
+        "rating": 3,
+        "release_date":"28 Januari 2022",
+        "review":"Diadaptasi dari webtoon yang bercerita tentang zombie apocalypse yang terjadi di sekolah. Ada karakter yang sudah jatuh berkali-kali tetapi tidak mati-mati."
+    }
+ }   
+]
