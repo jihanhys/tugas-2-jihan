@@ -1,14 +1,14 @@
 Link aplikasi: https://tugas2-katalog-han.herokuapp.com/todolist/
 
-Apa kegunaan {% csrf_token %} pada elemen <form>? Apa yang terjadi apabila tidak ada potongan kode tersebut pada elemen <form>?
+### Apa kegunaan {% csrf_token %} pada elemen form? Apa yang terjadi apabila tidak ada potongan kode tersebut pada elemen form?
 csrf_token digunakan untuk menangani threats berupa CSRF. CSRF merupakan sebuah serangan anggap saja dari hacker, yang akan mengirimkan form buatan dia sendiri. Dengan csrf_token, token akan dicek oleh fungsi views yang menangani action. Jika valid akan dikirim ke server. Jika tidak valid seperti tidak ada tokennya, maka tidak akan diproses. Jika potongan kode ini tidak ada, maka form buatan kita yang ada di database menjadi tidak terproteksi, sehingga bila ada hacker bisa saja mengirimkan form buatan dia sendiri, bukannya form yang seharusnya. Saat kita run aplikasi, akan muncul verification failed dan request tidak bisa diproses.
   
-Apakah kita dapat membuat elemen <form> secara manual (tanpa menggunakan generator seperti {{ form.as_table }})? Jelaskan secara gambaran besar bagaimana cara membuat <form> secara manual.
-
-Jelaskan proses alur data dari submisi yang dilakukan oleh pengguna melalui HTML form, penyimpanan data pada database, hingga munculnya data yang telah disimpan pada template HTML.
+### Apakah kita dapat membuat elemen form secara manual (tanpa menggunakan generator seperti {{ form.as_table }})? Jelaskan secara gambaran besar bagaimana cara membuat form secara manual.
+Kita bisa membuat form secara manual tanpa menggunakan built-in methods seperti form.as_table, form.as_p, atau form.as_ul.Caranya yaitu dengan mengedit konten html menggunakan CSS. Jadi, bukannya dengan form.as_table, tetapi dengan mengakses atribut di models satu-satu dengan form pada section masing-masing. Misal untuk atribut di todolist, maka akan diakses form.title, form.description, dst.
+### Jelaskan proses alur data dari submisi yang dilakukan oleh pengguna melalui HTML form, penyimpanan data pada database, hingga munculnya data yang telah disimpan pada template HTML.
 User melakukan request pada browser. Lalu, akan di-generate http request yang diminta user. Server akan menerima request dari user, dan akan mencari views yang menangani path yang di-request. Kemudian akan di-generate halaman form. Halaman form dikirimkan sebagai response ke user, ditampilkan di browser. User isi form, lalu click submit. Form yang sudah diisi, dikirim ke alamat yang ada di bagian action pada file HTML. Lalu dikirim ke server. Kemudian server akan cek dan cari views yang menangani form. Terakhir, page HTML akan di-display ke user.
   
-Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+### Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
 Pertama, untuk membuat suatu aplikasi baru bernama todolist, saya menjalankan perintah python manage.py startapp todolist. Kemudian, secara otomatis, Django akan menyediakan beberapa file yang kita butuhkan kecuali urls.py, forms.py, serta folder templates untuk menyimpan file html. Saya juga mendaftarkan aplikasi todolist di settings.py pada folder project_django.
 Kedua, untuk menambahkan path todolist, akan ditambahkan pada urls.py di folder project_django.
 Ketiga, pembuatan model Task dilakukan pada file models.py dengan atribut user, date, title, dan description. Atribut user menggunakan Foreign Key dengan parameter User karena merepresentasikan relationship many-to-one.
