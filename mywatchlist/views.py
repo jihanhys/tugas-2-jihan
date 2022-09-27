@@ -34,3 +34,26 @@ def show_json(request):
 def show_json_by_id(request, id):
     data = MyWatchList.objects.filter(pk=id)
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+
+def show_all(request, type):
+    data = MyWatchList.objects.all()
+    if type == "xml":
+        return HttpResponse(serializers.serialize("xml", data), content_type="application/xml")
+    elif type == "json":
+        return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+    elif type == "html":
+        sudah = 0
+        belum = 0
+        for o in data:
+            if o.watched == "Sudah ditonton":
+                sudah +=1
+            else:
+                belum +=1
+        context = {
+            'watchlist_item'    : data,
+            'nama'              :"Jihan Hanifah Yasmin",
+            'npm'               : 2106701955,
+            'watched_count'     : sudah,
+            'unwatched_count'   : belum
+        }
+        return render(request, "mywatchlist.html", context)
