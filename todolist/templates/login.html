@@ -1,45 +1,97 @@
 {% extends 'base.html' %}
-
-{% block meta %}
-<title>Login</title>
-{% endblock meta %}
+<!DOCTYPE html>
+<html>
 
 {% block content %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
+        a{
+            text-align: center;
+        }
+        input[type=button], input[type=submit], input[type=reset]{
+                background-color: #99ccff;
+                color: white;
+                padding: 11px 21px;
+                text-decoration: none;
+                margin: 4px 2px;
+                cursor: pointer;
+        }
+        .form-control{
+            width: 100%;
+            padding: 10px;
+            margin: 5px;
+            border-left: 0;
+            border-top: 0;
+            border-right: 0;
+            border-bottom: 0;
+            background: rgb(231, 225, 225);
+        }
+        .col{
+            margin: 75px;
+            font-family: monospace;
+        }
+        h1{
+            font-family: monospace;
+        }
+        img{
+            margin: 15px 10px;
+        }
+        body{
+            background: #c9dbed;
+        }
+    </style>
+</head>
 
-<div class = "login">
+<body>
+    <div class="container" >
+            <div class = "login">
+                <div class="row">
+                    <div class="col">
+                        <picture>
+                            <img src="https://cdn.discordapp.com/attachments/1027201113344188481/1027211326696718356/undraw_Login_re_4vu2-removebg-preview.png" class="img-responsive" alt="registerpic" width="400">
+                        </picture>
+                    </div>
+                    <div class="col">
+                    <h1>Login</h1>
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>  
+                    <form method="POST" action="" class="input-group">
+                        {% csrf_token %}
+                        <table>
+                            <tr>
+                                <td>Username: </td>
+                                <td><input type="text" name="username" placeholder="Username" class="form-control"></td>
+                            </tr>
+                                    
+                            <tr>
+                                <td>Password: </td>
+                                <td><input type="password" name="password" placeholder="Password" class="form-control"></td>
+                            </tr>
+                
+                            <tr>
+                                <td></td>
+                                <td><input class="btn login_btn" type="submit" value="Login"></td>
+                            </tr>
+                        </table>
+                    </form>
+                
+                    {% if messages %}
+                        <ul>
+                            {% for message in messages %}
+                                <li>{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}     
+                    Belum mempunyai akun? <a href="{% url 'todolist:register' %}">Buat Akun</a>
+                    </div>
+                </div>
+        </div>
+    </div>
 
-    <h1>Login</h1>
-
-    <form method="POST" action="">
-        {% csrf_token %}
-        <table>
-            <tr>
-                <td>Username: </td>
-                <td><input type="text" name="username" placeholder="Username" class="form-control"></td>
-            </tr>
-                    
-            <tr>
-                <td>Password: </td>
-                <td><input type="password" name="password" placeholder="Password" class="form-control"></td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td><input class="btn login_btn" type="submit" value="Login"></td>
-            </tr>
-        </table>
-    </form>
-
-    {% if messages %}
-        <ul>
-            {% for message in messages %}
-                <li>{{ message }}</li>
-            {% endfor %}
-        </ul>
-    {% endif %}     
-        
-    Belum mempunyai akun? <a href="{% url 'todolist:register' %}">Buat Akun</a>
-
-</div>
+</body>
 
 {% endblock content %}
+</html>
